@@ -13,6 +13,8 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+
+# This is the build task
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
@@ -21,8 +23,7 @@ steps:
     arguments: '--configuration Release' # Update this to match your need
 
 
-# ...
-# do this after other tasks such as building
+# Tis is the test task
 - task: DotNetCoreCLI@2
   displayName: Test
   inputs:
@@ -32,9 +33,10 @@ steps:
 
 
 
-
+# This is the package task
 
 - task: DotNetCoreCLI@2
+  displayName: Package
   inputs:
     command: publish
     publishWebProjects: True
