@@ -23,7 +23,7 @@ steps:
     arguments: '--configuration Release' # Update this to match your need
 
 
-# Tis is the test task
+# This is the test task
 - task: DotNetCoreCLI@2
   displayName: Test
   inputs:
